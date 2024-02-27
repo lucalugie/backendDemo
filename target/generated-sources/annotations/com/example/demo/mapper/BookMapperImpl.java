@@ -7,8 +7,8 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-27T18:13:08+0700",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.10 (Oracle Corporation)"
+    date = "2024-02-27T23:39:22+0700",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 21.0.1 (Azul Systems, Inc.)"
 )
 public class BookMapperImpl implements BookMapper {
 
