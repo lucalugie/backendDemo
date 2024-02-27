@@ -1,0 +1,12 @@
+com/example/demo/proto/BookServiceGrpc.class
+com/example/demo/proto/BookServiceGrpc$BookServiceStub.class
+com/example/demo/proto/BookServiceGrpc$BookServiceMethodDescriptorSupplier.class
+com/example/demo/proto/BookServiceGrpc$BookServiceBlockingStub.class
+com/example/demo/proto/BookServiceGrpc$1.class
+com/example/demo/proto/BookServiceGrpc$BookServiceFutureStub.class
+com/example/demo/proto/BookServiceGrpc$BookServiceFileDescriptorSupplier.class
+com/example/demo/proto/BookServiceGrpc$BookServiceImplBase.class
+com/example/demo/proto/BookServiceGrpc$3.class
+com/example/demo/proto/BookServiceGrpc$MethodHandlers.class
+com/example/demo/proto/BookServiceGrpc$2.class
+com/example/demo/proto/BookServiceGrpc$BookServiceBaseDescriptorSupplier.class
