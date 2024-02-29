@@ -1,3 +1,15 @@
-/Users/lucaeugeniegomis/Documents/GitHub/demo 2/src/main/java/com/example/demo/proto/BookOuterClass.java
-/Users/lucaeugeniegomis/Documents/GitHub/demo 2/src/main/java/com/example/demo/proto/BookServiceGrpc.java
-/Users/lucaeugeniegomis/Documents/GitHub/demo 2/src/main/java/com/example/demo/DemoApplication.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/controller/BookController.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/config/MapperConfig.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/proto/BookOuterClass.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/service/BookService.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/controller/GlobalExceptionHandler.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/repository/BookRepository.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/dto/BookRequest.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/entity/Book.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/DemoApplication.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/controller/BookGrpcController.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/proto/BookServiceGrpc.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/entity/Author.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/mapper/BookMapper.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/service/BookServiceImpl.java
+/Users/lucaeugeniegomis/Documents/GitHub/backendDemo/src/main/java/com/example/demo/dto/BookResponse.java

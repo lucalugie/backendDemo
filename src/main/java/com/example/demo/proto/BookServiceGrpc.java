@@ -46,6 +46,37 @@ public final class BookServiceGrpc {
     return getFindBooksByCategoryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.example.demo.proto.BookOuterClass.IdRequest,
+      com.example.demo.proto.BookOuterClass.Book> getFindBookByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FindBookById",
+      requestType = com.example.demo.proto.BookOuterClass.IdRequest.class,
+      responseType = com.example.demo.proto.BookOuterClass.Book.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.demo.proto.BookOuterClass.IdRequest,
+      com.example.demo.proto.BookOuterClass.Book> getFindBookByIdMethod() {
+    io.grpc.MethodDescriptor<com.example.demo.proto.BookOuterClass.IdRequest, com.example.demo.proto.BookOuterClass.Book> getFindBookByIdMethod;
+    if ((getFindBookByIdMethod = BookServiceGrpc.getFindBookByIdMethod) == null) {
+      synchronized (BookServiceGrpc.class) {
+        if ((getFindBookByIdMethod = BookServiceGrpc.getFindBookByIdMethod) == null) {
+          BookServiceGrpc.getFindBookByIdMethod = getFindBookByIdMethod =
+              io.grpc.MethodDescriptor.<com.example.demo.proto.BookOuterClass.IdRequest, com.example.demo.proto.BookOuterClass.Book>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindBookById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.demo.proto.BookOuterClass.IdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.demo.proto.BookOuterClass.Book.getDefaultInstance()))
+              .setSchemaDescriptor(new BookServiceMethodDescriptorSupplier("FindBookById"))
+              .build();
+        }
+      }
+    }
+    return getFindBookByIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -101,6 +132,13 @@ public final class BookServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindBooksByCategoryMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void findBookById(com.example.demo.proto.BookOuterClass.IdRequest request,
+        io.grpc.stub.StreamObserver<com.example.demo.proto.BookOuterClass.Book> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindBookByIdMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -110,6 +148,13 @@ public final class BookServiceGrpc {
                 com.example.demo.proto.BookOuterClass.CategoryRequest,
                 com.example.demo.proto.BookOuterClass.CategoryResponse>(
                   this, METHODID_FIND_BOOKS_BY_CATEGORY)))
+          .addMethod(
+            getFindBookByIdMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.example.demo.proto.BookOuterClass.IdRequest,
+                com.example.demo.proto.BookOuterClass.Book>(
+                  this, METHODID_FIND_BOOK_BY_ID)))
           .build();
     }
   }
@@ -135,6 +180,14 @@ public final class BookServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFindBooksByCategoryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void findBookById(com.example.demo.proto.BookOuterClass.IdRequest request,
+        io.grpc.stub.StreamObserver<com.example.demo.proto.BookOuterClass.Book> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFindBookByIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -156,6 +209,13 @@ public final class BookServiceGrpc {
     public com.example.demo.proto.BookOuterClass.CategoryResponse findBooksByCategory(com.example.demo.proto.BookOuterClass.CategoryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFindBooksByCategoryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.demo.proto.BookOuterClass.Book findBookById(com.example.demo.proto.BookOuterClass.IdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFindBookByIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -180,9 +240,18 @@ public final class BookServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFindBooksByCategoryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.demo.proto.BookOuterClass.Book> findBookById(
+        com.example.demo.proto.BookOuterClass.IdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFindBookByIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_FIND_BOOKS_BY_CATEGORY = 0;
+  private static final int METHODID_FIND_BOOK_BY_ID = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -204,6 +273,10 @@ public final class BookServiceGrpc {
         case METHODID_FIND_BOOKS_BY_CATEGORY:
           serviceImpl.findBooksByCategory((com.example.demo.proto.BookOuterClass.CategoryRequest) request,
               (io.grpc.stub.StreamObserver<com.example.demo.proto.BookOuterClass.CategoryResponse>) responseObserver);
+          break;
+        case METHODID_FIND_BOOK_BY_ID:
+          serviceImpl.findBookById((com.example.demo.proto.BookOuterClass.IdRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.demo.proto.BookOuterClass.Book>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -267,6 +340,7 @@ public final class BookServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BookServiceFileDescriptorSupplier())
               .addMethod(getFindBooksByCategoryMethod())
+              .addMethod(getFindBookByIdMethod())
               .build();
         }
       }

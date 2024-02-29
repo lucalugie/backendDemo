@@ -2,7 +2,8 @@ syntax = "proto3";
 option java_package = "com.example.demo.proto";
 
 service BookService {
-  rpc FindBooksByCategory (CategoryRequest) returns (CategoryResponse);
+  rpc FindBooksByCategory(CategoryRequest) returns (CategoryResponse);
+  rpc FindBookById(IdRequest) returns (Book);
 }
 
 message CategoryRequest {
@@ -19,4 +20,8 @@ message Book {
   string author = 3;
   double price = 4;
   string category = 5;
+}
+
+message IdRequest {
+  int64 id = 1;
 }
