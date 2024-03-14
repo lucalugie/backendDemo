@@ -41,10 +41,6 @@ public interface BookMapper {
                 .map(this::entityToProto)
                 .collect(Collectors.toList());
     }
-
-    ///Hi my name
-    //say hi 
-
 }
 
 
